@@ -14,6 +14,7 @@ import math
 
 class SMPLX(object):
     def __init__(self):
+        cfg.human_model_path = "/database/zwg/Program/ExAvatar_RELEASE/fitting/common/utils/human_model_files"
         self.shape_param_dim = 100
         self.expr_param_dim = 50
         self.layer_arg = {'create_global_orient': False, 'create_body_pose': False, 'create_left_hand_pose': False, 'create_right_hand_pose': False, 'create_jaw_pose': False, 'create_leye_pose': False, 'create_reye_pose': False, 'create_betas': False, 'create_expression': False, 'create_transl': False}
