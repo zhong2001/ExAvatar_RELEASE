@@ -584,7 +584,8 @@ class HumanGaussian(nn.Module):
 
         # get pose-dependent Gaussian assets
         mean_offset_offset, scale_offset = self.forward_geo_network(tri_feat, smplx_param)
-        scale, scale_refined = torch.exp(scale).repeat(1, 3), torch.exp(scale + scale_offset).repeat(1, 3)
+        #scale, scale_refined = torch.exp(scale).repeat(1, 3), torch.exp(scale + scale_offset).repeat(1, 3)
+        scale = torch.exp(scale).repeat(1, 3)
         mean_combined_offset, mean_offset_offset = self.get_mean_offset_offset(smplx_param, mean_offset_offset)
         #mean_3d_refined = mean_3d + mean_combined_offset  # 大 pose
 
