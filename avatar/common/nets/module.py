@@ -572,7 +572,7 @@ class HumanGaussian(nn.Module):
             print('tri_feat_compute')
         else:
             tri_feat = self.tri_feat
-
+            print("Use caching...")
 
         # get Gaussian assets
         geo_feat = self.geo_net(tri_feat)
